@@ -39,11 +39,7 @@ class _Intro extends State<Intro> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.transparent),
-                    child: Padding(
-                      padding: const EdgeInsets.all(25.0),
-                      child: Image.asset(
-                          "assets/imgbin-chocolate-chip-cookie-food-biscuits-emoji-cookie-bitten-chocolate-chips-illustration-pXzCDdptG1fDBDT3Ssw4LN9Pb__1_-removebg-preview.png"),
-                    ),
+                    child: Container(),
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height / 3.5,
@@ -168,3 +164,8 @@ class _Intro extends State<Intro> {
         ));
   }
 }
+ /**Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: Image.asset(
+                          "assets/imgbin-chocolate-chip-cookie-food-biscuits-emoji-cookie-bitten-chocolate-chips-illustration-pXzCDdptG1fDBDT3Ssw4LN9Pb__1_-removebg-preview.png"),
+                    ),**/

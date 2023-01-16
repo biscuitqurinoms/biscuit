@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'OTP.dart';
 import 'otp.dart';
 
 class Login extends StatefulWidget {
@@ -240,7 +239,7 @@ class _Login extends State<Login> {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   PageTransition(
                     curve: Curves.linear,

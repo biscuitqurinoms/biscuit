@@ -1,6 +1,4 @@
-import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -159,7 +157,7 @@ class _Register extends State<Register> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Conform Password",
+                            "Confirm Password",
                             textAlign: TextAlign.center,
                             style: GoogleFonts.alata(
                               fontWeight: FontWeight.w100,
@@ -271,7 +269,7 @@ class _Register extends State<Register> {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   PageTransition(
                     curve: Curves.linear,

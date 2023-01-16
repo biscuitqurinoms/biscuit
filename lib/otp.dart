@@ -1,11 +1,8 @@
-import 'dart:ui';
-
-
-import 'package:biscuit2/profile.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+
+import 'homepage.dart';
 
 class Otp extends StatefulWidget {
   const Otp({Key? key}) : super(key: key);
@@ -33,7 +30,7 @@ class _Otp extends State<Otp> {
               ),
               child: Padding(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 35.0, vertical: 30),
+                    const EdgeInsets.symmetric(horizontal: 35.0, vertical: 30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -123,13 +120,11 @@ class _Otp extends State<Otp> {
                       color: Colors.white12,
                     ),
                   ),
-
                 ],
               ),
             ),
             InkWell(
-              onTap: () {
-              },
+              onTap: () {},
               child: Container(
                 height: MediaQuery.of(context).size.height / 12,
                 width: MediaQuery.of(context).size.width / 1.1,
@@ -150,16 +145,22 @@ class _Otp extends State<Otp> {
               ),
             ),
             InkWell(
-              onTap: (){
-                Navigator.push(
-                  context,
-                  PageTransition(
-                    curve: Curves.linear,
-                    type: PageTransitionType.bottomToTop,
-                    child: UserProfilePage(),
-                  ),
-                );
-
+              onTap: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    PageTransition(
+                      curve: Curves.linear,
+                      type: PageTransitionType.bottomToTop,
+                      child: HomePage(),
+                    ),
+                    (route) => false);
+                //Navigator.push(
+                //  context,
+                //  PageTransition(
+                //    curve: Curves.linear,
+                //    type: PageTransitionType.bottomToTop,
+                //    child: UserProfilePage(),
+                //   ));
               },
               child: Container(
                 height: MediaQuery.of(context).size.height / 12,

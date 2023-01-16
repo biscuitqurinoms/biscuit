@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'Post2.dart';
 
 class UserHomePage extends StatelessWidget {
-  final _controller = PageController(initialPage: 0);
+  final _controller = PageController();
 
   @override
   Widget build(BuildContext context) {
