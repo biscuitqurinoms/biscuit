@@ -1,3 +1,4 @@
+import 'package:biscuit2/Component/navigation_button.dart';
 import 'package:biscuit2/plus.dart';
 import 'package:biscuit2/profile.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _pages = [
-    UserHomePage(),
-    UserSearchPage(),
     UserPlusPage(),
+    UserSearchPage(), 
+    UserHomePage(),
     UserInboxPage(),
     UserProfilePage(),
   ];
@@ -34,19 +35,104 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       //backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
+      bottomNavigationBar: BottomAppBar(
+        notchMargin: 5,
+        shape: CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    onTap:() {
+                      _navigateBottomBar(0);
+                    },
+                    child: NavigationButton(
+                      iconData: Icons.home,
+                      label: 'Home',
+                      selected: _selectedIndex == 0,
+                    ),
+                  ),
+                  InkWell(
+                    onTap:() {
+                      _navigateBottomBar(1);
+                    },
+                    child: NavigationButton(
+                      iconData: Icons.home,
+                      label: 'Home',
+                      selected: _selectedIndex == 1,
+                  
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.home,
+                  color: Colors.transparent,
+                  size: 35,
+                ),
+                Text(
+                  "Create",
+                )
+              ],
+            ),
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    onTap:() {
+                      _navigateBottomBar(3);
+                    },
+                    child: NavigationButton(
+                      iconData: Icons.home,
+                      label: 'Home',
+                      selected: _selectedIndex == 3,
+                  
+                    ),
+                  ),
+                  InkWell(
+                    onTap:() {
+                      _navigateBottomBar(4);
+                    },
+                    child: NavigationButton(
+                      iconData: Icons.home,
+                      label: 'Home',
+                      selected: _selectedIndex == 4,
+                  
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {_navigateBottomBar(2);},
+        elevation: 0,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    );
+  }
+}
+/**
+ *  currentIndex: _selectedIndex,
+        
         onTap: _navigateBottomBar,
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.add_box_rounded), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.abc,color: Colors.transparent,),label: 'Create'),
           BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_rounded), label: 'Inbox'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
-      ),
-    );
-  }
-}
+ */
