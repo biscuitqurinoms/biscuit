@@ -16,7 +16,7 @@ class MyButton extends StatelessWidget {
             icon,
             size: 40,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(number),

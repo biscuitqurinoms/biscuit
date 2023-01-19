@@ -3,6 +3,7 @@ import 'package:biscuit2/plus.dart';
 import 'package:biscuit2/profile.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
+import 'feed_screen.dart';
 import 'home.dart';
 import 'inbox.dart';
 
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _pages = [
-    UserPlusPage(),
+    FeedScreen(),
     UserSearchPage(), 
     UserHomePage(),
     UserInboxPage(),
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
         notchMargin: 5,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -60,8 +61,8 @@ class _HomePageState extends State<HomePage> {
                       _navigateBottomBar(1);
                     },
                     child: NavigationButton(
-                      iconData: Icons.home,
-                      label: 'Home',
+                      iconData: Icons.notification_add,
+                      label: 'Notifications',
                       selected: _selectedIndex == 1,
                   
                     ),
@@ -72,13 +73,13 @@ class _HomePageState extends State<HomePage> {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(
+                const Icon(
                   Icons.home,
                   color: Colors.transparent,
-                  size: 35,
+                  
                 ),
-                Text(
-                  "Create",
+                const Text(
+                  "",
                 )
               ],
             ),
@@ -91,8 +92,8 @@ class _HomePageState extends State<HomePage> {
                       _navigateBottomBar(3);
                     },
                     child: NavigationButton(
-                      iconData: Icons.home,
-                      label: 'Home',
+                      iconData: Icons.create,
+                      label: 'Create',
                       selected: _selectedIndex == 3,
                   
                     ),
@@ -102,8 +103,8 @@ class _HomePageState extends State<HomePage> {
                       _navigateBottomBar(4);
                     },
                     child: NavigationButton(
-                      iconData: Icons.home,
-                      label: 'Home',
+                      iconData: Icons.account_circle,
+                      label: 'Profile',
                       selected: _selectedIndex == 4,
                   
                     ),
