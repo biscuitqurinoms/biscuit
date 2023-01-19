@@ -27,62 +27,66 @@ class PostTemplate extends StatelessWidget {
           userPost,
 
           // user name and caption
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              alignment: Alignment(-1, 1),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text('@' + username,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      )),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                            text: videoDescription,
-                            style: TextStyle(color: Colors.white)),
-                        TextSpan(
-                            text: ' #fyp #flutter',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white)),
-                      ],
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                alignment: Alignment(-1, 1),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('@' + username,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        )),
+                    SizedBox(
+                      height: 10,
                     ),
-                  )
-                ],
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                              text: videoDescription,
+                              style: TextStyle(color: Colors.white)),
+                          TextSpan(
+                              text: ' #fyp #flutter',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
 
           // buttons
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              alignment: Alignment(1, 1),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  MyButton(
-                    icon: Icons.favorite,
-                    number: numberOfLikes,
-                  ),
-                  MyButton(
-                    icon: Icons.chat_bubble_outlined,
-                    number: numberOfComments,
-                  ),
-                  MyButton(
-                    icon: Icons.send,
-                    number: numberOfShares,
-                  ),
-                ],
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                alignment: Alignment(1, 1),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    MyButton(
+                      icon: Icons.favorite,
+                      number: numberOfLikes,
+                    ),
+                    MyButton(
+                      icon: Icons.chat_bubble_outlined,
+                      number: numberOfComments,
+                    ),
+                    MyButton(
+                      icon: Icons.send,
+                      number: numberOfShares,
+                    ),
+                  ],
+                ),
               ),
             ),
           )

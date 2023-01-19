@@ -1,5 +1,4 @@
 import 'package:biscuit2/Component/navigation_button.dart';
-import 'package:biscuit2/plus.dart';
 import 'package:biscuit2/profile.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
@@ -24,9 +23,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> _pages = [
-    FeedScreen(),
-    UserSearchPage(), 
     UserHomePage(),
+    UserSearchPage(),
+    FeedScreen(),
     UserInboxPage(),
     UserProfilePage(),
   ];
@@ -34,9 +33,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       //backgroundColor: Colors.white,
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
+        color: Colors.black45,
         notchMargin: 5,
         shape: const CircularNotchedRectangle(),
         child: Row(
@@ -47,24 +48,23 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap:() {
+                    onTap: () {
                       _navigateBottomBar(0);
                     },
                     child: NavigationButton(
-                      iconData: Icons.home,
+                      iconData: Icons.home_outlined,
                       label: 'Home',
                       selected: _selectedIndex == 0,
                     ),
                   ),
                   InkWell(
-                    onTap:() {
+                    onTap: () {
                       _navigateBottomBar(1);
                     },
                     child: NavigationButton(
-                      iconData: Icons.notification_add,
-                      label: 'Notifications',
+                      iconData: Icons.search,
+                      label: 'Discover',
                       selected: _selectedIndex == 1,
-                  
                     ),
                   ),
                 ],
@@ -72,14 +72,15 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(
               mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Icon(
                   Icons.home,
+                  size: 38,
                   color: Colors.transparent,
-                  
                 ),
                 const Text(
-                  "",
+                  "Create",
                 )
               ],
             ),
@@ -88,25 +89,23 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap:() {
+                    onTap: () {
                       _navigateBottomBar(3);
                     },
                     child: NavigationButton(
-                      iconData: Icons.create,
-                      label: 'Create',
+                      iconData: Icons.notifications_none_outlined,
+                      label: 'Notification',
                       selected: _selectedIndex == 3,
-                  
                     ),
                   ),
                   InkWell(
-                    onTap:() {
+                    onTap: () {
                       _navigateBottomBar(4);
                     },
                     child: NavigationButton(
-                      iconData: Icons.account_circle,
+                      iconData: Icons.account_circle_outlined,
                       label: 'Profile',
                       selected: _selectedIndex == 4,
-                  
                     ),
                   ),
                 ],
@@ -116,7 +115,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {_navigateBottomBar(2);},
+        onPressed: () {
+          _navigateBottomBar(2);
+        },
+        backgroundColor: Colors.orange[700],
         elevation: 0,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
