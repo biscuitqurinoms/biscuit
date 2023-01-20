@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     UserHomePage(),
-    UserSearchPage(),
+    const UserSearchPage(),
     FeedScreen(),
     UserInboxPage(),
     UserProfilePage(),
