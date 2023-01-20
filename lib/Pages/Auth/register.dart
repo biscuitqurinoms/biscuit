@@ -1,7 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'Login.dart';
+import '../../Login.dart';
 import 'otp.dart';
 
 class Register extends StatefulWidget {

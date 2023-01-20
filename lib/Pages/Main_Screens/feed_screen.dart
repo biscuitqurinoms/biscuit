@@ -1,8 +1,8 @@
-import 'package:biscuit2/view_post_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Component/post_component.dart';
+import '../../Component/post_component.dart';
+import 'view_post_screen.dart';
 
 class FeedScreen extends StatefulWidget {
   @override

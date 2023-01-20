@@ -1,8 +1,8 @@
+import 'package:biscuit2/Pages/Main_Screens/homepage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'homepage.dart';
 
 class Otp extends StatefulWidget {
   const Otp({Key? key}) : super(key: key);

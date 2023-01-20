@@ -1,6 +1,5 @@
-import 'package:biscuit2/intro.dart';
+import 'package:biscuit2/Pages/Auth/intro.dart';
 import 'package:flutter/material.dart';
-import 'homepage.dart';
 
 void main() {
   

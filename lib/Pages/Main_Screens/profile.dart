@@ -1,7 +1,7 @@
 import 'package:biscuit2/thiredtab.dart';
 import 'package:flutter/material.dart';
-import 'Firsttab.dart';
-import 'Secondtab.dart';
+import '../../Firsttab.dart';
+import '../../Secondtab.dart';
 
 class UserProfilePage extends StatelessWidget {
   @override

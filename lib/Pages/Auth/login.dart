@@ -1,11 +1,11 @@
 import 'dart:ui';
-import 'package:biscuit2/resister.dart';
+import 'package:biscuit2/Pages/Auth/otp.dart';
+import 'package:biscuit2/Pages/Auth/register.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'otp.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

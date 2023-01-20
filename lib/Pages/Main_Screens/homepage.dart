@@ -1,8 +1,8 @@
 import 'package:biscuit2/Component/navigation_button.dart';
-import 'package:biscuit2/profile.dart';
+import 'package:biscuit2/Pages/Main_Screens/feed_screen.dart';
+import 'package:biscuit2/Pages/Main_Screens/profile.dart';
 import 'package:flutter/material.dart';
 import 'Search.dart';
-import 'feed_screen.dart';
 import 'home.dart';
 import 'inbox.dart';
 

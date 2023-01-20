@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
+import '../Component/button.dart';
 
 class PostTemplate extends StatelessWidget {
   final String username;

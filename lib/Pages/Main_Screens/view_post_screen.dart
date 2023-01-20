@@ -1,8 +1,7 @@
+import 'package:biscuit2/Component/comments_component.dart';
+import 'package:biscuit2/Component/post_component.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'Component/comments_component.dart';
-import 'Component/post_component.dart';
 
 class ViewPostScreen extends StatefulWidget {
   final Post post;
