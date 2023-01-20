@@ -10,21 +10,21 @@ class UserProfilePage extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Shivansh', style: TextStyle(color: Colors.black)),
+          title: Text('Shivansh', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.transparent,
           elevation: 0,
-          leading: Icon(Icons.person_add, color: Colors.black),
+          leading: Icon(Icons.person_add, color: Colors.white),
           actions: const [
             Padding(
               padding: EdgeInsets.only(right: 12.0),
               child: Icon(
                 Icons.menu,
-                color: Colors.black,
+                color: Colors.white,
               ),
             )
           ],
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         body: Column(
           children: [
             // profile photo
@@ -33,7 +33,7 @@ class UserProfilePage extends StatelessWidget {
               width: 120,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.grey[200],
+                color: Colors.orangeAccent,
               ),
             ),
 
@@ -42,7 +42,7 @@ class UserProfilePage extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 '@createdbyShivansh',
-                style: TextStyle(color: Colors.black, fontSize: 20),
+                style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
 
@@ -58,7 +58,7 @@ class UserProfilePage extends StatelessWidget {
                         Text(
                           '37',
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
@@ -80,7 +80,7 @@ class UserProfilePage extends StatelessWidget {
                         Text(
                           '8',
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
@@ -103,7 +103,7 @@ class UserProfilePage extends StatelessWidget {
                         Text(
                           '56',
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 24),
                         ),
@@ -130,7 +130,7 @@ class UserProfilePage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                   child: Text('Edit profile',
-                      style: TextStyle(color: Colors.black, fontSize: 20)),
+                      style: TextStyle(color: Colors.white, fontSize: 20)),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade300),
                       borderRadius: BorderRadius.circular(5)),
@@ -173,13 +173,13 @@ class UserProfilePage extends StatelessWidget {
             TabBar(
               tabs: [
                 Tab(
-                  icon: Icon(Icons.grid_3x3, color: Colors.black),
+                  icon: Icon(Icons.grid_3x3, color: Colors.white),
                 ),
                 Tab(
-                  icon: Icon(Icons.favorite, color: Colors.black),
+                  icon: Icon(Icons.favorite, color: Colors.white),
                 ),
                 Tab(
-                  icon: Icon(Icons.lock_outline_rounded, color: Colors.black),
+                  icon: Icon(Icons.lock_outline_rounded, color: Colors.white),
                 ),
               ],
             ),
