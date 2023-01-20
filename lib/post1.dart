@@ -1,4 +1,4 @@
-import 'package:biscuit2/post_temp.dart';
+import 'package:biscuit2/Models/post_temp.dart';
 import 'package:flutter/material.dart';
 
 class MyPost1 extends StatelessWidget {

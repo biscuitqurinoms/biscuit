@@ -11,7 +11,7 @@ class ThiredTab extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(2.0),
             child: Container(
-              color: Colors.grey[200],
+              color: Colors.orangeAccent,
             ),
           );
         });
